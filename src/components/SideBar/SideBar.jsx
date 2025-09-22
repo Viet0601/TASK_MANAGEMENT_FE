@@ -14,7 +14,7 @@ const Sidebar = ({ userName = "User" }) => {
   return (
     <div className="sidebar">
     <div className="sidebar-header">
-      <h2>Xin chào, {name.split(" ")[name.split(" ").length-1] || "User"} 👋</h2>
+      <h2>Xin chào, {name && name.split(" ")[name.split(" ").length-1] || "User"} 👋</h2>
       <p>Quản lý nhiệm vụ hiệu quả ✨</p>
     </div>
   
