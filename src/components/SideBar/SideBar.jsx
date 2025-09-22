@@ -7,12 +7,14 @@ import {
 } from "lucide-react";
 import "./Sidebar.scss";
 import { LINK } from "../../utils/constants";
+import { useSelector } from "react-redux";
 
 const Sidebar = ({ userName = "User" }) => {
+  const name=useSelector(s=>s.user.user?.name);
   return (
     <div className="sidebar">
     <div className="sidebar-header">
-      <h2>Xin chào, User 👋</h2>
+      <h2>Xin chào, {name.split(" ")[name.split(" ").length-1] || "User"} 👋</h2>
       <p>Quản lý nhiệm vụ hiệu quả ✨</p>
     </div>
   
