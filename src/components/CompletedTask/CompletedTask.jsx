@@ -308,7 +308,7 @@ const CompletedTask = () => {
       </div>
 
       {/* Pagination */}
-      <Pagination align='center' defaultCurrent={page} total={completedTasks&& completedTasks.total * 10} onChange={(e)=>setPage(e)} />
+      {completedTasks && completedTasks.list && completedTasks.list.length>0 && <Pagination align='center' defaultCurrent={page} total={completedTasks&& completedTasks.total * 10} onChange={(e)=>setPage(e)} />}
 
     </div>
     {isComfirm && <ConfirmModal
